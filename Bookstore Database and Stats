@@ -1,0 +1,26 @@
+--Create a bookstore database
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, name TEXT, demand TEXT, product TEXT, price INTEGER);
+
+INSERT INTO bookstore VALUES (1, "romance", "high", "book", 20);
+INSERT INTO bookstore VALUES (2, "thriller", "medium", "book", 15);
+INSERT INTO bookstore VALUES (3, "mystery", "medium", "book", 15);
+INSERT INTO bookstore VALUES (4, "scifi", "high", "book", 18);
+INSERT INTO bookstore VALUES (5, "horror", "high", "book", 18);
+INSERT INTO bookstore VALUES (6, "biography", "low", "book", 25);
+INSERT INTO bookstore VALUES (7, "bookmarks", "medium", "accessory", 6);
+INSERT INTO bookstore VALUES (8, "kindle", "medium", "electronic", 50);
+INSERT INTO bookstore VALUES (9, "movies", "low", "media", 10);
+INSERT INTO bookstore VALUES (10, "CDs", "low", "media", 10);
+INSERT INTO bookstore VALUES (11, "plushies", "high", "toy", 15);
+INSERT INTO bookstore VALUES (12, "notebooks", "medium", "stationary", 10);
+INSERT INTO bookstore VALUES (13, "audiobooks", "high", "book", 22);
+INSERT INTO bookstore VALUES (14, "highlighters", "low", "stationary", 5);
+INSERT INTO bookstore VALUES (15, "graphic novel", "high", "book", 10);
+
+--Display the database ordered by price
+SELECT * FROM bookstore
+ORDER BY price desc;
+
+--What's the price of the most expensive item?
+SELECT MAX(price) FROM bookstore;
